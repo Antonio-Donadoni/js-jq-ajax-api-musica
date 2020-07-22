@@ -11,15 +11,21 @@
           <div  data-genre={{genre}} class="cd">
               <img src={{poster}} alt="">
               <h3>{{title}}</h3>
-              <span class="author">{{author}}</span>
-              <span class="year">{{year}}</span>
+              <div>
+                <span class="author">{{author}}</span><br>
+                <span class="year">{{year}}</span>
+              </div>
           </div>
         </script>
     </head>
     <body>
         <header>
             <div class="container">
+              <div class="nav-left">
                 <img src="logo.png" alt="logo">
+                <h1>Album Preferiti</h1>
+              </div>
+
                 <div class="">
                   <label for="genres">Seleziona un genere: </label>
                   <select name="genres" id="genre-selector">
