@@ -21,9 +21,14 @@ header {
     height: 70px;
     background: rgb(46, 58, 70);
 }
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 header img {
     height: 50px;
-    margin-top: 10px;
 }
 
 .cds-container {

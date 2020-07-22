@@ -50,11 +50,34 @@ function getAlbums() {
  });
 };
 
+function selectGenre() {
 
+ var selector = $("#genre-selector");
+ selector.change(function() {
+   $(".cd").show();
+   var genre = selector.val();
+
+   if (genre != " ") {
+
+    $(".cd").each(function() {
+    var cdGenre = $(this).data("genre");
+    console.log(cdGenre);
+    console.log(genre);
+    var isGenreEqual = (cdGenre == genre);
+
+    if (!isGenreEqual) {
+      $(this).hide();
+      }
+
+    });
+  }
+ });
+};
 
 function init() {
 
 getAlbums();
+selectGenre();
 }
 
 $( document ).ready(init);
