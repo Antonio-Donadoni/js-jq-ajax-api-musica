@@ -13,23 +13,11 @@ function getAlbums() {
         for (var i = 0; i < arr.length; i++) {
 
           var album = arr[i];
-          var title = album["title"];
-          var author = album["author"];
-          var genre = album["genre"];
-          var year = album["year"];
-          var poster = album["poster"];
-
 
           var template = $('#album-template').html();
           var compiled = Handlebars.compile(template);
           var target = $('.cds-container');
-          var albumHTML = compiled({
-           'poster': poster,
-           'title': title,
-           'author': author,
-           'year' : year,
-           'genre': genre
-          });
+          var albumHTML = compiled(album);
 
           target.append(albumHTML);
         }
